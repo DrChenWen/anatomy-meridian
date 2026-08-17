@@ -18,6 +18,7 @@ import type { Hotspot, Organ } from "../i18n/merge";
 import { format, type UiDictionary } from "../i18n/types";
 import type { AnatomyViewer } from "../lib/three/viewer";
 import type { MeridianViewer } from "../lib/three/meridian-viewer";
+import type { HumanBodyMeridianViewer } from "../lib/three/human-body-viewer";
 
 type Props = {
   organ: Organ;
@@ -220,9 +221,9 @@ export function OrganViewer({ organ, t, autoRotate, onAutoRotate, compare, onCom
     // Dynamically pick the right 3D viewer:
     // Meridian mode = no GLB, uses MeridianViewer (programmatic body + lines)
     // Otherwise  = uses AnatomyViewer (GLB model)
-    const useMeridian = organRef.current.model === "meridian";
-    if (useMeridian) {
-      void import("../lib/three/meridian-viewer").then(({ MeridianViewer: Viewer }) => {
+    const useHumanBody = organRef.current.model === "human-body";
+    if (useHumanBody) {
+      void import("../lib/three/human-body-viewer").then(({ HumanBodyMeridianViewer: Viewer }) => {
         if (cancelled || !mountRef.current) return;
         viewer = new Viewer(mountRef.current, {
           onSelect: setSelected,
@@ -232,12 +233,10 @@ export function OrganViewer({ organ, t, autoRotate, onAutoRotate, compare, onCom
             if (isLoading) setSlowLoad(false);
           },
           onPick: (hotspot) => pickRef.current(hotspot),
-          onAuthorPoint: (point) => authorRef.current(point),
         }) as unknown as AnatomyViewer;
         viewerRef.current = viewer;
         viewer.setCanvasLabel(canvasLabelRef.current);
         viewer.setAutoRotate(autoRotateRef.current);
-        viewer.setAuthoring(authoringRef.current);
         const current = organRef.current;
         viewer.setOrgan(current.model, current.hotspots, current.accent).catch(() => {
           setLoading(false);

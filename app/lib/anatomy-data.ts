@@ -21,7 +21,7 @@ export type HotspotStructure = {
 export type OrganStructure = {
   id: OrganId;
   /** No GLB — rendered programmatically */
-  model: "meridian";
+  model: "human-body";
   icon: string;
   accent: string;
   illustrated: false;
@@ -45,7 +45,7 @@ export const organStructures: OrganStructure[] = [
   // ─── 手太阴肺经 (LU) ───────────────────────────────────────────────
   {
     id: "lung",
-    model: "meridian",
+    model: "human-body",
     icon: "☁",
     accent: "#7ec8e3",
     illustrated: false,
@@ -67,7 +67,7 @@ export const organStructures: OrganStructure[] = [
   // ─── 手阳明大肠经 (LI) ─────────────────────────────────────────────
   {
     id: "large-intestine",
-    model: "meridian",
+    model: "human-body",
     icon: "⿴",
     accent: "#f5a623",
     illustrated: false,
@@ -90,7 +90,7 @@ export const organStructures: OrganStructure[] = [
   // ─── 足阳明胃经 (ST) ───────────────────────────────────────────────
   {
     id: "stomach",
-    model: "meridian",
+    model: "human-body",
     icon: "田",
     accent: "#f5c842",
     illustrated: false,
@@ -113,7 +113,7 @@ export const organStructures: OrganStructure[] = [
   // ─── 足太阴脾经 (SP) ───────────────────────────────────────────────
   {
     id: "spleen",
-    model: "meridian",
+    model: "human-body",
     icon: "� espiral",
     accent: "#f7d154",
     illustrated: false,
@@ -136,7 +136,7 @@ export const organStructures: OrganStructure[] = [
   // ─── 手少阴心经 (HT) ───────────────────────────────────────────────
   {
     id: "heart",
-    model: "meridian",
+    model: "human-body",
     icon: "♥",
     accent: "#c94a4a",
     illustrated: false,
@@ -158,7 +158,7 @@ export const organStructures: OrganStructure[] = [
   // ─── 手太阳小肠经 (SI) ─────────────────────────────────────────────
   {
     id: "small-intestine",
-    model: "meridian",
+    model: "human-body",
     icon: "◎",
     accent: "#e8b84b",
     illustrated: false,
@@ -180,7 +180,7 @@ export const organStructures: OrganStructure[] = [
   // ─── 足太阳膀胱经 (BL) ─────────────────────────────────────────────
   {
     id: "bladder",
-    model: "meridian",
+    model: "human-body",
     icon: "☵",
     accent: "#6a9fd4",
     illustrated: false,
@@ -205,7 +205,7 @@ export const organStructures: OrganStructure[] = [
   // ─── 足少阴肾经 (KD) ───────────────────────────────────────────────
   {
     id: "kidney",
-    model: "meridian",
+    model: "human-body",
     icon: "☰",
     accent: "#8b5fa8",
     illustrated: false,
@@ -228,7 +228,7 @@ export const organStructures: OrganStructure[] = [
   // ─── 手厥阴心包经 (PC) ─────────────────────────────────────────────
   {
     id: "pericardium",
-    model: "meridian",
+    model: "human-body",
     icon: "✧",
     accent: "#d4688a",
     illustrated: false,
@@ -251,7 +251,7 @@ export const organStructures: OrganStructure[] = [
   // ─── 手少阳三焦经 (SJ) ─────────────────────────────────────────────
   {
     id: "san-jiao",
-    model: "meridian",
+    model: "human-body",
     icon: "⊕",
     accent: "#7eb87a",
     illustrated: false,
@@ -274,7 +274,7 @@ export const organStructures: OrganStructure[] = [
   // ─── 足少阳胆经 (GB) ───────────────────────────────────────────────
   {
     id: "gallbladder",
-    model: "meridian",
+    model: "human-body",
     icon: "☱",
     accent: "#6db36d",
     illustrated: false,
@@ -298,7 +298,7 @@ export const organStructures: OrganStructure[] = [
   // ─── 足厥阴肝经 (LV) ───────────────────────────────────────────────
   {
     id: "liver",
-    model: "meridian",
+    model: "human-body",
     icon: "⿱",
     accent: "#48b846",
     illustrated: false,
@@ -322,7 +322,7 @@ export const organStructures: OrganStructure[] = [
   // ─── 任脉 (Ren) ────────────────────────────────────────────────────
   {
     id: "ren",
-    model: "meridian",
+    model: "human-body",
     icon: "☯",
     accent: "#e87d9e",
     illustrated: false,
@@ -348,7 +348,7 @@ export const organStructures: OrganStructure[] = [
   // ─── 督脉 (Du) ────────────────────────────────────────────────────
   {
     id: "du",
-    model: "meridian",
+    model: "human-body",
     icon: "☰",
     accent: "#5b9bd5",
     illustrated: false,
@@ -373,7 +373,7 @@ export const organStructures: OrganStructure[] = [
   // ─── 带脉 (Dai) ────────────────────────────────────────────────────
   {
     id: "dai",
-    model: "meridian",
+    model: "human-body",
     icon: "◎",
     accent: "#b07cc8",
     illustrated: false,
